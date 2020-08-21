@@ -32,21 +32,21 @@ bt3 = BreathingTechnique.create(
 
 bt4 = BreathingTechnique.create(
     name: "Lion's Breath", 
-    step_one: "", 
-    step_two: "", 
-    step_three: "", 
-    step_four: "")
+    step_one: "Find a comfortable seated position. Lean forward slightly, bracing your hands on your knees or the floor. Spread your fingers as wide as possible. Inhale through your nose.", 
+    step_two: "Open your mouth wide, stick out your tongue, and stretch it down toward your chin. Exhale forcefully, carrying the breath across the root of your tongue.", 
+    step_three: "While exhaling, make a “ha” sound that comes from deep within your abdomen.", 
+    step_four: "Breathe normally for a few moments. Repeat lion’s breath up to 7 times. Finish by breathing deeply for 1 to 3 minutes.")
 
 bt5 = BreathingTechnique.create(
     name: "Humming Bee", 
-    step_one: "", 
-    step_two: "", 
-    step_three: "", 
-    step_four: "")
+    step_one: "Sit up straight in a quiet, well ventilated corner with your eyes closed.", 
+    step_two: "Place your index fingers on your ears. There is a cartilage between your cheek and ear. Place your index fingers on the cartilage.", 
+    step_three: "Take a deep breath in and as you breathe out, gently press the cartilage. You can keep the cartilage pressed or press it in and out with your fingers, while making a loud humming sound like a bee.", 
+    step_four: "You can also make a low-pitched sound, but it is a good idea to make a high-pitched one for better results. Breathe in again and continue the same pattern for 6-7 times. Keep your eyes closed for some time.")
 
 bt6 = BreathingTechnique.create(
     name: "Pursed Lip", 
-    step_one: "", 
-    step_two: "", 
-    step_three: "", 
-    step_four: "")
+    step_one: "Sit with your back straight or lie down. Relax your shoulders as much as possible.", 
+    step_two: "Inhale through your nose for two seconds, feeling the air move into your abdomen. Try to fill your abdomen with air instead of just your lungs.", 
+    step_three: "Purse your lips like you’re blowing on hot food and then breathe out slowly, taking twice as long to exhale as you took to breathe in.", 
+    step_four: "Then repeat. Over time, you can increase the inhale and exhale counts from 2 seconds to 4 seconds, and so on.")
