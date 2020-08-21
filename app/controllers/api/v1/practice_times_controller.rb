@@ -1,4 +1,5 @@
 class PracticeTimesController < ApplicationController
+  
   def index
     practice_times = PracticeTime.all 
     render json: practice_times

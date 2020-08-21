@@ -5,3 +5,48 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+
+#Breathing Techniques
+
+bt1 = BreathingTechnique.create(
+    name: "Alternate Nostril Breathing", 
+    step_one: "Sit in a comfortable position. Place your left hand on your left knee.", 
+    step_two: "Lift your right hand up toward your nose. Exhale completely and then use your right thumb to close your right nostril.", 
+    step_three: "Inhale through your left nostril and then close the left nostril with your fingers. Open the right nostril and exhale through this side.", 
+    step_four: "Inhale through the right nostril and then close this nostril. Open the left nostril and exhale through the left side. This is one cycle. Continue for up to 5 minutes.Always complete the practice by finishing with an exhale on the left side." )
+
+bt2 = BreathingTechnique.create(
+    name: "Ujjayi", 
+    step_one: "1. Begin seated in a comfortable position. Inhale and exhale deeply through your mouth. On your exhalations, slightly contract the back of your throat, as you do when you whisper. Softly whisper the sound, “ahhh,” as you exhale. Imagine your breath fogging up a window.", 
+    step_two: "2. As you become comfortable with your exhalations, maintain the slight constriction of the throat on your inhalations, as well. You will notice your breath making an “ocean” sound, softly moving in and out, like ocean waves.", 
+    step_three: "3. When you can comfortably control your throat during the inhalations and exhalations, gently close your mouth and begin breathing only through your nose. Keep the same constriction in your throat as you did when your mouth was open. You will continue to hear the “ocean” sound as you breathe through your nose. Direct the breath to travel over your vocal cords, across the back of your throat. Keep your mouth closed, but your lips soft.", 
+    step_four: "4. Concentrate on the sound of your breath; allow it to soothe your mind. Let your inhalations fill your lungs to their fullest expansion. Completely release the air during your exhalations. Practice for 5 minutes and eventually work your way up to 15 minutes.")
+
+bt3 = BreathingTechnique.create(
+    name: "Diaphragmatic Breathing", 
+    step_one: "Lie on your back on a flat surface or in bed, with your knees bent and your head supported. You can use a pillow under your knees to support your legs. Place one hand on your upper chest and the other just below your rib cage. This will allow you to feel your diaphragm move as you breathe.", 
+    step_two: "Breathe in slowly through your nose so that your stomach moves out against your hand. The hand on your chest should remain as still as possible.", 
+    step_three: "Tighten your stomach muscles, letting them fall inward as you exhale through pursed lips. The hand on your upper chest must remain as still as possible.", 
+    step_four: "When you first learn the diaphragmatic breathing technique, it may be easier for you to follow the instructions lying down, as shown above. As you gain more practice, you can try the diaphragmatic breathing technique while sitting in a chair, as shown below.")
+
+bt4 = BreathingTechnique.create(
+    name: "Lion's Breath", 
+    step_one: "", 
+    step_two: "", 
+    step_three: "", 
+    step_four: "")
+
+bt5 = BreathingTechnique.create(
+    name: "Humming Bee", 
+    step_one: "", 
+    step_two: "", 
+    step_three: "", 
+    step_four: "")
+
+bt6 = BreathingTechnique.create(
+    name: "Pursed Lip", 
+    step_one: "", 
+    step_two: "", 
+    step_three: "", 
+    step_four: "")
