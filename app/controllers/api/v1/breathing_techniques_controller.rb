@@ -1,5 +1,5 @@
-class BreathingTechniquesController < ApplicationController
-  
+class Api::V1::BreathingTechniquesController < ApplicationController
+
   def index
     breathing_techniques = BreathingTechnique.all 
     render json: breathing_techniques
