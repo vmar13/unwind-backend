@@ -19,10 +19,11 @@ class Api::V1::UsersController < ApplicationController
   def create
     user = User.create(user_params)
     if user.valid?
-      token = encode_token(user_id: user.id)
-    render json: { user: user, token: token }
+      payload = {user_id: user.id}
+      token = encode_token(payload)
+    render json: { user: user, jwt: token }
     else 
-      render json: { error: 'Invalid username or password'}
+      render json: { error: user.error.full_messages }, status: :not acceptable
     end
   end
 
@@ -44,6 +45,6 @@ class Api::V1::UsersController < ApplicationController
   private 
 
   def user_params
-    params.permit(:username, :password_digest)
+    params.permit(:username, :password)
   end 
 end
