@@ -1,15 +1,19 @@
 class ApplicationController < ActionController::API
-    # before_action :authorized
+    before_action :authorized
 
     def encode_token(payload)
         JWT.encode(payload, 's3cr3t')
     end
 
+    #This method looks at HTTP request for key of 'Authorization' with 
+    #format of Bearer <token>. This method returns a token.
     def auth_header
-        { 'Authorization': 'Bearer <token>' }
+        # { 'Authorization': 'Bearer <token>' }
         request.headers['Authorization']
     end 
 
+    #This method returns an array from JWT.decode. We only care about
+    #the first index: key of user_id, which is used in logged_in_user method
     def decoded_token
         if auth_header
             token = auth_header.split(' ')[1]
@@ -21,7 +25,9 @@ class ApplicationController < ActionController::API
         end
     end
 
-    def current_user
+    #This method checks if a User instance with that ID
+    #exists in the database. If so, it's authorized.
+    def logged_in_user
         if decoded_token
             user_id = decoded_token[0]['user_id']
             @user = User.find_by(id: user_id)
@@ -29,7 +35,7 @@ class ApplicationController < ActionController::API
     end
 
     def logged_in?
-        !!current_user
+        !!logged_in_user
     end
 
     def authorized
