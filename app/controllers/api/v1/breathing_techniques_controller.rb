@@ -1,8 +1,10 @@
 class Api::V1::BreathingTechniquesController < ApplicationController
 
+ 
+
   def index
     breathing_techniques = BreathingTechnique.all 
-    render json: breathing_techniques
+    render json: breathing_techniques.to_json
   end
 
   def show
