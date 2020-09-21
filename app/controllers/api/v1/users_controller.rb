@@ -8,7 +8,7 @@ class Api::V1::UsersController < ApplicationController
 
   def show
     user = User.find(params[:id])
-    render json: user, include: '**' 
+    render json: user, include: "**" 
   end
 
   # def new
@@ -23,7 +23,7 @@ class Api::V1::UsersController < ApplicationController
       token = encode_token(payload)
     render json: { user: UserSerializer.new(user), token: token }
     else 
-      render json: { error: 'Invalid username or password.' }
+      render json: { error: "Invalid username or password." }
     end
   end
 
@@ -34,7 +34,7 @@ class Api::V1::UsersController < ApplicationController
       token = encode_token({ user_id: user.id })
       render json: { user: UserSerializer.new(user), token: token }
     else
-      render json: { error: 'Invalid username or password' }
+      render json: { error: "Invalid username or password" }
     end
   end
 
