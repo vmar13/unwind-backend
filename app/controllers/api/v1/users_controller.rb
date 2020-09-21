@@ -19,7 +19,7 @@ class Api::V1::UsersController < ApplicationController
   def create
     user = User.create(user_params)
     if user.valid?
-      # payload = {user_id: user.id}
+      payload = {user_id: user.id}
       token = encode_token(payload)
     render json: { user: UserSerializer.new(user), jwt: token}, status: :created
     else 
@@ -27,6 +27,9 @@ class Api::V1::UsersController < ApplicationController
     end
   end
 
+  def profile
+    render json: { user: UserSerializer.new(previously_logged_in_user) }, status: :accepted
+  end
   # def login 
   #   user = User.find_by(username: params[:username])
 
@@ -46,6 +49,6 @@ class Api::V1::UsersController < ApplicationController
   private 
 
   def user_params
-    params.require(:user).permit(:username, :password_digest)
+    params.require(:user).permit(:username, :password)
   end 
 end
