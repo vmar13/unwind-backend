@@ -8,6 +8,7 @@
 
 
 BreathingTechnique.destroy_all
+User.destroy_all
 
 #Breathing Techniques
 
@@ -52,3 +53,9 @@ bt6 = BreathingTechnique.create(
     step_two: "Inhale through your nose for two seconds, feeling the air move into your abdomen. Try to fill your abdomen with air instead of just your lungs.", 
     step_three: "Purse your lips like you’re blowing on hot food and then breathe out slowly, taking twice as long to exhale as you took to breathe in.", 
     step_four: "Then repeat. Over time, you can increase the inhale and exhale counts from 2 seconds to 4 seconds, and so on.")
+
+#Users
+
+vani = User.create(username: 'broomhilda', password:'petitchou')
+gio =User.create(username: 'bikerDude', password:'colombia')
+david = User.create(username: 'bestPT', password:'novio')
