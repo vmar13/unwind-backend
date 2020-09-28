@@ -1,4 +1,5 @@
 class Api::V1::UsersController < ApplicationController
+  wrap_parameters format: [:json, :xml, :url_encoded_form, :multipart_form]
   # skip_before_action :authorized, only: [:create]
   # before_action :authorized, only: [:stay_logged_in]
 
@@ -55,6 +56,6 @@ class Api::V1::UsersController < ApplicationController
   private 
 
   def user_params
-    params.require(:user).permit(:username, :password)
+    params.permit(:username, :password)
   end 
 end
