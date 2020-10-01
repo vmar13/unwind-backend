@@ -1,6 +1,5 @@
 class ApplicationController < ActionController::API
-    # include ActionController::Serialization
-    # before_action :authorized
+# before_action :authorized
 
     def encode_token(payload)
         JWT.encode(payload, 's3cr3t')
@@ -17,9 +16,7 @@ class ApplicationController < ActionController::API
     #the first index: key of user_id, which is used in logged_in_user method
     def decoded_token
         if auth_header
-            # token = auth_header
             token = auth_header.split(' ')[1]
-
             begin
                 JWT.decode(token, 's3cr3t', true, algorithm: 'HS256')
             rescue JWT::DecodeError
@@ -30,7 +27,8 @@ class ApplicationController < ActionController::API
 
     #This method checks if a User instance with that ID
     #exists in the database. If so, it's authorized.
-    def previously_logged_in_user
+    #This is the previously logged in user.
+    def current_user
         if decoded_token
             user_id = decoded_token[0]['user_id']
             user = User.find_by(id: user_id)
@@ -38,7 +36,7 @@ class ApplicationController < ActionController::API
     end
 
     def logged_in?
-        !!previously_logged_in_user
+        !!current_user
     end
 
     def authorized

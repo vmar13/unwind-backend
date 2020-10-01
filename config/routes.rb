@@ -7,8 +7,8 @@ Rails.application.routes.draw do
       # get 'users/profile', to: 'users#profile'
 
     resources :users
-    # post '/login', to: 'auth#create'
-    # get '/profile', to: 'users#profile'
+    post '/login', to: 'auth#create'
+    get '/profile', to: 'users#profile'
     resources :breathing_techniques
     resources :favorites
     resources :practice_times
