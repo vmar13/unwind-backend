@@ -1,6 +1,5 @@
 class Api::V1::UsersController < ApplicationController
-  # wrap_parameters format: [:json, :xml, :url_encoded_form, :multipart_form]
-  # skip_before_action :authorized, only: [:create]
+  skip_before_action :authorized, only: [:create]
 
   def index
     users = User.all 
