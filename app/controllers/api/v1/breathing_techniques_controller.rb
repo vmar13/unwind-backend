@@ -1,6 +1,4 @@
 class Api::V1::BreathingTechniquesController < ApplicationController
-  # before_action :index
-
 
   def index
     breathing_techniques = BreathingTechnique.all 

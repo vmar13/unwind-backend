@@ -13,7 +13,7 @@ before_action :authorized
     end 
 
     # #This method returns an array from JWT.decode. We only care about
-    # #the first index: key of user_id, which is used in logged_in_user/current_user method
+    # #the first index: key of user_id, which is used in current_user method
     def decoded_token
         if auth_header
             token = auth_header.split(' ')[1]
