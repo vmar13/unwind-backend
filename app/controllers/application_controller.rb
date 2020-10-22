@@ -2,6 +2,7 @@ class ApplicationController < ActionController::API
 before_action :authorized
 
     def encode_token(payload)
+        # unwind_key = ENV['UNWIND_SECRET']
         JWT.encode(payload, 's3cr3t')
     end
 
@@ -15,6 +16,7 @@ before_action :authorized
     # #This method returns an array from JWT.decode. We only care about
     # #the first index: key of user_id, which is used in current_user method
     def decoded_token
+        # unwind_key = ENV['UNWIND_SECRET']
         if auth_header
             token = auth_header.split(' ')[1]
             begin

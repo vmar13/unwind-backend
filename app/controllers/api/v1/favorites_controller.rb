@@ -17,7 +17,7 @@ class Api::V1::FavoritesController < ApplicationController
 
   def create
     favorite = Favorite.create(favorite_params)
-    render json: favorite
+    render json: favorite 
   end
 
   def destroy

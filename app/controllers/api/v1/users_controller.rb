@@ -11,11 +11,11 @@ class Api::V1::UsersController < ApplicationController
     render json: user 
   end
 
-  # stay logged in
   def profile
     render json: { user: UserSerializer.new(current_user) }, status: :accepted
   end 
 
+  # sign up a new user
   def create
     @user = User.create(user_params)
     if @user.valid?
