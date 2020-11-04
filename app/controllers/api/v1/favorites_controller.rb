@@ -3,7 +3,7 @@ class Api::V1::FavoritesController < ApplicationController
   
   def index
     favorites = Favorite.all 
-    render json: favorites, include: [:user, :breathing_technique]
+    render json: favorites, include: [:user, :breathing_technique, :name]
   end
 
   def show
@@ -29,6 +29,6 @@ class Api::V1::FavoritesController < ApplicationController
   private 
 
   def favorite_params
-    params.require(:favorite).permit(:user_id, :breathing_technique_id)
+    params.require(:favorite).permit(:user_id, :breathing_technique_id, :name)
   end 
 end
