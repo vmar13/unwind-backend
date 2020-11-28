@@ -1,4 +1,6 @@
 class Api::V1::PracticeTimesController < ApplicationController
+  skip_before_action :authorized
+
 
   def index
     practice_times = PracticeTime.all 
@@ -38,6 +40,6 @@ class Api::V1::PracticeTimesController < ApplicationController
   private 
 
   def practice_time_params 
-    params.require(:practice_time).permit(:title, :favorite_id, :start, :end)
+    params.require(:practice_time).permit(:title, :user_id, :start, :end)
   end 
 end
