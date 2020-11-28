@@ -8,7 +8,7 @@ class Api::V1::FavoritesController < ApplicationController
 
   def show
     favorite = Favorite.find(params[:id])
-    render json: favorite 
+    render json: favorite, include: [:user, :breathing_technique], methods: :name 
   end
 
   def new
