@@ -38,6 +38,6 @@ class Api::V1::PracticeTimesController < ApplicationController
   private 
 
   def practice_time_params 
-    params.require(:practice_time).permit(:date, :time, :favorite_id)
+    params.require(:practice_time).permit(:title, :favorite_id, :start, :end)
   end 
 end
