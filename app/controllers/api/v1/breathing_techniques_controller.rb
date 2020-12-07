@@ -20,9 +20,20 @@ class Api::V1::BreathingTechniquesController < ApplicationController
     render json: breathing_technique
   end
 
+  def edit
+    breathing_technique = BreathingTechnique.find(params[:id])
+    render json: breathing_technique
+  end 
+
+  def update
+    breathing_technique = BreathingTechnique.find(params[:id])
+    breathing_technique.update(breathing_technique_params)
+    render json: breathing_technique
+  end 
+
   private 
 
   def breathing_technique_params
-    params.require(:breathing_technique).permit(:name, :step_one, :step_two, :step_three, :step_four)
+    params.require(:breathing_technique).permit(:name, :step_one, :step_two, :step_three, :step_four, :favorited)
   end 
 end
