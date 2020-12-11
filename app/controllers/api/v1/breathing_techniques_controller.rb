@@ -1,4 +1,6 @@
 class Api::V1::BreathingTechniquesController < ApplicationController
+  skip_before_action :authorized
+
 
   def index
     breathing_techniques = BreathingTechnique.all 
