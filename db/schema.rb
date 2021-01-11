@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_11_000322) do
+ActiveRecord::Schema.define(version: 2021_01_11_003825) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -23,8 +23,6 @@ ActiveRecord::Schema.define(version: 2020_12_11_000322) do
     t.string "step_four"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.boolean "favorited"
-    t.integer "fav_id"
   end
 
   create_table "favorites", force: :cascade do |t|

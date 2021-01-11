@@ -36,6 +36,6 @@ class Api::V1::BreathingTechniquesController < ApplicationController
   private 
 
   def breathing_technique_params
-    params.require(:breathing_technique).permit(:name, :step_one, :step_two, :step_three, :step_four, :favorited, :fav_id)
+    params.require(:breathing_technique).permit(:name, :step_one, :step_two, :step_three, :step_four)
   end 
 end
