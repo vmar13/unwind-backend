@@ -1,24 +1,17 @@
-# README
+# UNWIND (server)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+The Unwind application was created to teach users breathing techniques to relax. Watch the [video demo](https://www.youtube.com/watch?v=v7KwQT727PM&feature=youtu.be).  
 
-Things you may want to cover:
+**NOTE: This is the backend repository. View the [frontend repo](https://github.com/vmar13/unwind-frontend).**
 
-* Ruby version
+*Backend developed using Ruby on Rails and postgreSQL*
 
-* System dependencies
+## Getting Started
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+1. Clone down and cd into this repo
+2. Run "bundle install" to install dependencies
+3. Run "rake db:create"
+4. Run "rake db:migrate"
+5. Run "rails db:seed" to seed the database
+6. Run "rails s" to start the server
+7. Start the frontend using the link **above**
