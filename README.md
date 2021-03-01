@@ -1,4 +1,4 @@
-# UNWIND (server)
+# 🌀 UNWIND (server)
 
 The Unwind application was created to teach users breathing techniques to relax. Watch the [video demo](https://www.youtube.com/watch?v=v7KwQT727PM&feature=youtu.be).  
 
